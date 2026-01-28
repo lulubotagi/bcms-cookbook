@@ -509,3 +509,65 @@ p {
     padding: 36px 28px;
   }
 }
+
+/* Form styles */
+.form-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--sand);
+  border-radius: 12px;
+  background: var(--paper-soft);
+  color: var(--ink);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--olive);
+  box-shadow: 0 0 0 3px rgba(88, 98, 70, 0.12);
+}
+
+.form-input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.5;
+}
+
+select.form-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23586246' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+/* Mobile-specific form adjustments */
+@media (max-width: 640px) {
+  .form-panel {
+    border-radius: 20px;
+  }
+  
+  .form-input {
+    padding: 0.75rem 0.875rem;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
